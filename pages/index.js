@@ -1,41 +1,23 @@
-import styled from 'styled-components'
+import MainGrid from '../src/components/MainGrid'
+import Box from '../src/components/Box'
 
-//const Title = styled.h1`
-//  font-size: 50px;
-//  color: ${({ theme }) => theme.colors.primary};
-//`
-
-const Box = styled.div`
-  background: #ffffff;
-  border-radius: 8px;
-`;
-
-const MainGrid = styled.main`
-  display: grid;
-  grid-gap: 10px;
-  padding: 16px;
-  
-  @media(min-width: 860px){
-    grid-template-areas: "profileArea welcomeArea profileRelationsArea";
-    grid-template-columns: 160px 1fr 312px;
-  }
-
-`;
 
 export default function Home() {
+  const githubUser = 'charlesffn';
+
   return (
     <MainGrid>
-      <div style={{ gridArea: 'profileArea'}}>
+      <div className="profileArea" style={{ gridArea: 'profileArea'}}>
         <Box>
-          Imagem
+          <img src={`https://github.com/${githubUser}.png`} style={{borderRadius: '8px '}}/>
         </Box>
       </div>
-      <div style={{ gridArea: 'welcomeArea'}}>
+      <div className="welcomeArea" style={{ gridArea: 'welcomeArea'}}>
         <Box>
           Bem vindo
         </Box>
       </div>  
-      <div style={{ gridArea: 'profileRelationsArea'}}>
+      <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea'}}>
         <Box>
           Comunidades
         </Box>
