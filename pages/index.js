@@ -1,6 +1,13 @@
 import MainGrid from '../src/components/MainGrid'
 import Box from '../src/components/Box'
 
+function ProfileSidebar(propriedades) {
+  return (
+    <Box>
+    <img src={`https://github.com/${propriedades.githubUser}.png`} style={{borderRadius: '8px '}}/>
+    </Box>
+  )
+}
 
 export default function Home() {
   const githubUser = 'charlesffn';
@@ -8,9 +15,7 @@ export default function Home() {
   return (
     <MainGrid>
       <div className="profileArea" style={{ gridArea: 'profileArea'}}>
-        <Box>
-          <img src={`https://github.com/${githubUser}.png`} style={{borderRadius: '8px '}}/>
-        </Box>
+        <ProfileSidebar githubUser={githubUser}/>
       </div>
       <div className="welcomeArea" style={{ gridArea: 'welcomeArea'}}>
         <Box>
