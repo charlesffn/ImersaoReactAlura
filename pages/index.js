@@ -24,7 +24,7 @@ export default function Home() {
       </div>  
       <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea'}}>
         <Box>
-          Comunidades
+          Comunidade
         </Box>
       </div>  
     </MainGrid>
